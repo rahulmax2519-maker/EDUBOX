@@ -7,14 +7,23 @@
   <meta name="description" content="EDU-BOX is an offline-first learning platform bringing interactive education, multilingual content, quizzes, and progress tracking to communities without internet.">
   <title>EDU-BOX: Quality Education. Anywhere. Offline.</title>
   
+  <!-- PWA Manifest & App Icons -->
   <link rel="manifest" href="./manifest.json">
-<link rel="icon" type="image/svg+xml" href="./icon-192.svg">
-<link rel="apple-touch-icon" href="./icon-192.svg">
+  <link rel="icon" type="image/svg+xml" href="./icon.svg">
+  <link rel="apple-touch-icon" href="./icon-192.png">
 
-<!-- Modern Educational CSS Design System -->
-<link rel="stylesheet" href="./app.css">
+  <!-- Modern Educational CSS Design System -->
+  <link rel="stylesheet" href="./app.css">
 </head>
 <body>
+  <!-- Fallback for environments without JavaScript enabled -->
+  <noscript>
+    <div style="padding: 20px; text-align: center; font-family: system-ui, sans-serif;">
+      <h2>JavaScript Required</h2>
+      <p>EDU-BOX requires JavaScript to be enabled in order to load learning modules offline.</p>
+    </div>
+  </noscript>
+
   <!-- Root React Container -->
   <div id="root">
     <!-- Initial Loading Screen (shown before React mounts) -->
@@ -31,16 +40,15 @@
   </div>
 
   <!-- 100% Offline-Capable Vendor Libraries -->
-<!-- 100% Offline-Capable Vendor Libraries -->
-<script src="./react.min.js"></script>
-<script src="./react-dom.min.js"></script>
-<script src="./babel.min.js"></script>
+  <script src="./react.min.js"></script>
+  <script src="./react-dom.min.js"></script>
+  <script src="./babel.min.js"></script>
 
-<!-- Application Modules -->
-<script src="./translations.js"></script>
-<script src="./quizData.js"></script>
-<script src="./db.js"></script>
-<script type="text/babel" src="./app.js"></script>
+  <!-- Application Modules -->
+  <script src="./translations.js"></script>
+  <script src="./quizData.js"></script>
+  <script src="./db.js"></script>
+  <script type="text/babel" src="./app.js"></script>
 
   <!-- PWA Service Worker Registration -->
   <script>
